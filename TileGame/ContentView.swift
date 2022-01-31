@@ -9,18 +9,21 @@ import SwiftUI
 import SpriteKit
 
 class GameScene: SKScene {
-    override func didMove(to view: SKView) {
-        physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+    var spriteRotating: SKSpriteNode = SKSpriteNode(imageNamed: "mascote")
+    
+    override func sceneDidLoad() {
+        spriteRotating.position = CGPoint(x: frame.midX + 150, y: frame.midY + 200)
+        spriteRotating.size.height = 100
+        spriteRotating.size.width = 100 * (356/474)
+        addChild(spriteRotating)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return }
-        let location = touch.location(in: self)
-        let box = SKSpriteNode(color: .red, size: CGSize(width: 50, height: 50))
-        box.position = location
-        box.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
-        addChild(box)
+        spriteRotating.run(SKAction.rotate(byAngle: -CGFloat.pi/2.0, duration: 0.5))
     }
+    
+
 }
 
 struct SpriteKitContainer: View {
@@ -43,31 +46,6 @@ struct SpriteKitContainer: View {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 struct ContentView_Previews: PreviewProvider {
