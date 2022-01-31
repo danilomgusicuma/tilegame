@@ -32,6 +32,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF7A2AE627A81265008BFF44 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Componentes;
+			sourceTree = "<group>";
+		};
+		EF7A2AE727A81327008BFF44 /* Cenas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cenas;
+			sourceTree = "<group>";
+		};
 		FF0D0E2B279994DF00473271 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +67,8 @@
 			children = (
 				FF0D0E37279994DF00473271 /* TileGameApp.swift */,
 				FF0D0E39279994DF00473271 /* ContentView.swift */,
+				EF7A2AE727A81327008BFF44 /* Cenas */,
+				EF7A2AE627A81265008BFF44 /* Componentes */,
 				FF0D0E3B279994E100473271 /* Assets.xcassets */,
 				FF0D0E3D279994E100473271 /* Preview Content */,
 			);
